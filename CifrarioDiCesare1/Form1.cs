@@ -65,14 +65,14 @@ namespace CifrarioDiCesare1
         {
             // Dichiarazione delle variabili  
             string ParolaChiara = "", ParolaCifrata;
-            int nLettera = 0, chiave1 = 0;
+            int nLettera = 0, chiave = 0;
 
             // Lettura del testo cifrato dalla casella di input e conversione tutto in minuscolo
             ParolaCifrata = txt_ParolaCifrata.Text;
             ParolaCifrata = ParolaCifrata.ToLower();
 
             // Lettura della chiave numerica e riduzione con modulo 26 per evitare caratteri strani
-            chiave1 = Convert.ToInt32(txt_ChiaveDecifrata.Text) % 26;
+            chiave = Convert.ToInt32(txt_ChiaveDecifrata.Text) % 26;
 
             // Ciclo per scorrere una lettera alla volta tutta la parola cifrata
             for (int i = 0; i < ParolaCifrata.Length; i++)
@@ -81,7 +81,7 @@ namespace CifrarioDiCesare1
                 nLettera = Convert.ToInt32(ParolaCifrata[i]);
 
                 // Sottrazione della chiave al codice della lettera per tornare indietro nell'alfabeto
-                nLettera = nLettera - chiave1;
+                nLettera = nLettera - chiave;
 
                 // Controllo per ricominciare dalla 'z' (122) se si scende sotto la 'a' (97)
                 if (nLettera < 97)
@@ -100,9 +100,81 @@ namespace CifrarioDiCesare1
             }
         }
 
-        
+        private void btn_CifraFissa_Click(object sender, EventArgs e)
+        {
+           
+            // Dichiarazione delle variabili
+            string ParolaChiara, ParolaCifrata = "";
+            int nLettera = 0, chiave = 3;
+
+            // Lettura del testo dalla casella di input e conversione tutto in minuscolo
+            ParolaChiara = txt_ParolaChiaraF.Text;
+            ParolaChiara = ParolaChiara.ToLower();
+
+            // Ciclo per scorrere una lettera alla volta tutta la parola inserita
+            for (int i = 0; i < ParolaChiara.Length; i++)
+            {
+               
+                nLettera = Convert.ToInt32(ParolaChiara[i]);
+
+                // Somma della chiave fissa (3) al codice della lettera per spostarla in avanti nell'alfabeto
+                nLettera = nLettera + chiave;
+
+                // Controllo per ricominciare dalla 'a' (97) se si supera la 'z' (122)
+                if (nLettera > 122)
+                {
+                    nLettera = nLettera - 26;
+                }
+
+                // Conversione del nuovo codice numerico di nuovo in carattere
+                nLettera = Convert.ToChar(nLettera);
+
+                // Aggiunta della lettera cifrata alla stringa finale
+                ParolaCifrata = ParolaCifrata + (Char)nLettera;
+
+                // Visualizzazione del risultato Cifrato
+                lbl_RisultatoCifratoF.Text = "Il Risultato è " + ParolaCifrata;
+            }
+        }
+
+        private void btn_DecifraFissa_Click(object sender, EventArgs e)
+        {
+            // Dichiarazione delle variabili
+            string ParolaChiara = "", ParolaCifrata ;
+            int nLettera = 0, chiave = 3;
+
+            // Lettura del testo dalla casella di input e conversione tutto in minuscolo
+            ParolaCifrata=  txt_ParolaCifrataF.Text;
+            ParolaCifrata = ParolaCifrata.ToLower();
+
+            // Ciclo per scorrere una lettera alla volta tutta la parola inserita
+            for (int i = 0; i < ParolaCifrata.Length; i++)
+            {
+
+                nLettera = Convert.ToInt32(ParolaCifrata[i]);
+
+                // Somma della chiave fissa (3) al codice della lettera per spostarla in avanti nell'alfabeto
+                nLettera = nLettera - chiave;
+
+                // Controllo per ricominciare dalla 'a' (97) se si supera la 'z' (122)
+                if (nLettera < 97)
+                {
+                    nLettera = nLettera + 26;
+                }
+
+                // Conversione del nuovo codice numerico di nuovo in carattere
+                nLettera = Convert.ToChar(nLettera);
+
+                // Aggiunta della lettera cifrata alla stringa finale
+                ParolaChiara = ParolaChiara + (Char)nLettera;
+
+                // Visualizzazione del risultato Decifrato
+                lbl_RisultatoDecifratoF.Text = "Il Risultato è " + ParolaChiara;
+            }
+        }
     }
     }
+    
 
 
 
