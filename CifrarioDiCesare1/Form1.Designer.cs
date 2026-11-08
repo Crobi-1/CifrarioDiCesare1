@@ -59,6 +59,12 @@
             this.txt_ChiaveCifrataS = new System.Windows.Forms.TextBox();
             this.txt_ParolaCifrataS = new System.Windows.Forms.TextBox();
             this.txt_ChiaveDecifrataS = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Cifra
@@ -197,7 +203,7 @@
             // 
             this.lbl_RisultatoDecifrato.AutoSize = true;
             this.lbl_RisultatoDecifrato.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_RisultatoDecifrato.Location = new System.Drawing.Point(313, 296);
+            this.lbl_RisultatoDecifrato.Location = new System.Drawing.Point(294, 296);
             this.lbl_RisultatoDecifrato.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_RisultatoDecifrato.Name = "lbl_RisultatoDecifrato";
             this.lbl_RisultatoDecifrato.Size = new System.Drawing.Size(108, 24);
@@ -264,7 +270,7 @@
             // 
             this.lbl_Parola2.AutoSize = true;
             this.lbl_Parola2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Parola2.Location = new System.Drawing.Point(582, 167);
+            this.lbl_Parola2.Location = new System.Drawing.Point(586, 167);
             this.lbl_Parola2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Parola2.Name = "lbl_Parola2";
             this.lbl_Parola2.Size = new System.Drawing.Size(143, 24);
@@ -275,7 +281,7 @@
             // 
             this.lbl_n16.AutoSize = true;
             this.lbl_n16.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_n16.Location = new System.Drawing.Point(582, 228);
+            this.lbl_n16.Location = new System.Drawing.Point(585, 229);
             this.lbl_n16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_n16.Name = "lbl_n16";
             this.lbl_n16.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -287,7 +293,7 @@
             // 
             this.lbl_RisultatoCifratoS.AutoSize = true;
             this.lbl_RisultatoCifratoS.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_RisultatoCifratoS.Location = new System.Drawing.Point(582, 296);
+            this.lbl_RisultatoCifratoS.Location = new System.Drawing.Point(586, 296);
             this.lbl_RisultatoCifratoS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_RisultatoCifratoS.Name = "lbl_RisultatoCifratoS";
             this.lbl_RisultatoCifratoS.Size = new System.Drawing.Size(108, 24);
@@ -377,11 +383,77 @@
             this.txt_ChiaveDecifrataS.Size = new System.Drawing.Size(100, 23);
             this.txt_ChiaveDecifrataS.TabIndex = 30;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(564, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 35);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "|";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(564, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 35);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "|";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(564, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 35);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "|";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(564, 287);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 35);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "|";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(564, 367);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 35);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "|";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(564, 433);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(26, 35);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "|";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1216, 500);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_ChiaveDecifrataS);
             this.Controls.Add(this.txt_ParolaCifrataS);
             this.Controls.Add(this.txt_ChiaveCifrataS);
@@ -455,6 +527,12 @@
         private System.Windows.Forms.TextBox txt_ChiaveCifrataS;
         private System.Windows.Forms.TextBox txt_ParolaCifrataS;
         private System.Windows.Forms.TextBox txt_ChiaveDecifrataS;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 
