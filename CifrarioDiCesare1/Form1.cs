@@ -28,7 +28,7 @@ namespace CifrarioDiCesare1
 
             ParolaChiara = txt_ParolaChiara.Text;
             ParolaChiara = ParolaChiara.ToLower();
-            chiave = Convert.ToInt32(txt_Chiave.Text);
+            chiave = Convert.ToInt32(txt_ChiaveCifrata.Text);
             for (int i = 0; i < ParolaChiara.Length; i++)
             {
                 nLettera = Convert.ToInt32(ParolaChiara[i]);
@@ -40,7 +40,7 @@ namespace CifrarioDiCesare1
                 }
                 nLettera = Convert.ToChar(nLettera);
                 ParolaCifrata = ParolaCifrata + (Char)nLettera;
-                lbl_Risultato.Text ="Il Risultato è " + ParolaCifrata;
+                lbl_RisultatoCifrato.Text ="Il Risultato è " + ParolaCifrata;
 
             }
 
@@ -48,14 +48,7 @@ namespace CifrarioDiCesare1
 
         }
 
-      
-
-
-        
-
-        private void btn_Decifra_Click_1(object sender, EventArgs e)
-        
-            
+        private void btn_Decifra_Click(object sender, EventArgs e)
         {
             string ParolaChiara = "", ParolaCifrata;
             int nLettera = 0, chiave1 = 0;
@@ -63,7 +56,7 @@ namespace CifrarioDiCesare1
 
             ParolaCifrata = txt_ParolaCifrata.Text;
             ParolaCifrata = ParolaCifrata.ToLower();
-            chiave1 = Convert.ToInt32(txt_Chiave1.Text);
+            chiave1 = Convert.ToInt32(txt_ChiaveDecifrata.Text);
             for (int i = 0; i < ParolaCifrata.Length; i++)
             {
                 nLettera = Convert.ToInt32(ParolaCifrata[i]);
@@ -75,12 +68,10 @@ namespace CifrarioDiCesare1
                 }
                 nLettera = Convert.ToChar(nLettera);
                 ParolaChiara = ParolaChiara + (Char)nLettera;
-                lbl_Risultato1.Text = "Il Risultato è " + ParolaChiara;
+                lbl_RisultatoDecifrato.Text = "Il Risultato è " + ParolaChiara;
 
             }
         }
-
-       
     }
     }
 
